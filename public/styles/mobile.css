@@ -1,0 +1,31 @@
+#mobile-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.home h1, nav.home a {
+  text-shadow: 1px 1px 1px #000;
+}
+
+.home h1 {
+  animation: homeHeader 10s infinite alternate;
+}
+
+@keyframes homeHeader {
+  0% {color: #9fff80;}
+  50% {color: #ffb840;}
+  100% {color: #0CA1F2;}
+}
+
+nav.home a {
+  font-size: 13vw;
+  color: #fff;
+  opacity: .9;
+}
