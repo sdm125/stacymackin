@@ -1,11 +1,10 @@
 Options -Multiviews
 RewriteEngine On
-#RewriteCond %{HTTPS} !=on
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} !=on
 
 RewriteBase /stacymackin/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+RewriteRule ^(.+)$ https://%{HTTP_HOST}%{REQUEST_URI}public/index.php?url=$1 [QSA,L]
