@@ -163,7 +163,7 @@ $(document).ready(function() {
    * contents of body fade out and success message with
    * selected character image is displayed.
    */
-  $('button').on('click', function(e) {
+  $('button[type="submit"]').on('click', function(e) {
     var capitolize = function(name){
       return name.charAt(0).toUpperCase() + name.substring(1, name.length);
     };
@@ -212,12 +212,60 @@ $(document).ready(function() {
    * Work
    */
 
-   $('.work').on('mouseover', function(){
-     $(this).children('.work-overlay').css({'opacity':'.3'});
-     $(this).find('h2').css({'color':'#fff'});
-   }).on('mouseleave', function(){
-     $(this).children('.work-overlay').css({'opacity':'0'});
-     $(this).find('h2').css({'color':'#0CA1F2'});
-   });
+  (function(){
+    var width = $(window).width(),
+    setWorkHeight = function(){
+      $('.work').css('height', 'auto');
+      var tallest = $('.work').get(0).offsetHeight;
+      $('.work').each(function(_, elem){
+        if(elem.offsetHeight > tallest){
+          tallest = elem.offsetHeight;
+        }
+      });
+      $('.work').css('height', tallest + 50);
+    };
+    if($('.work').length > 0){
+      setWorkHeight();
+    }
+
+    $(window).on('resize', function(){
+      if(width != $(window).width()){
+        width = $(window).width();
+        setWorkHeight();
+      }
+    });
+  })();
+
+  (function(){
+    if($('.work').length > 0){
+      var i = 0,
+      work = $('.work'),
+      indicators = $('.indicator');
+
+      work[i].classList.add('active');
+    }
+    $('.arrow').on('click', function(){
+      if($(this).hasClass('fa-long-arrow-left')){
+        if(i > 0){
+          indicators[i].classList.remove('fa-circle');
+          indicators[i].classList.add('fa-circle-o');
+          work[i--].classList.remove('active');
+          work[i].classList.add('active');
+          indicators[i].classList.add('fa-circle');
+          indicators[i].classList.remove('fa-circle-o');
+        }
+      }
+      else if($(this).hasClass('fa-long-arrow-right')){
+        if(i < work.length - 1){
+          indicators[i].classList.add('fa-circle-o');
+          indicators[i].classList.remove('fa-circle');
+          work[i++].classList.remove('active');
+          work[i].classList.add('active');
+          indicators[i].classList.add('fa-circle');
+          indicators[i].classList.remove('fa-circle-o');
+        }
+      }
+    });
+  })();
 
 });

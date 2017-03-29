@@ -5,7 +5,7 @@
   <?php $videos = array('about','work', 'contact'); ?>
   <?php foreach($videos as $v): ?>
     <video id=<?php echo '"' . $v . 'Video"'; ?> loop muted>
-      <source src=<?php echo '"../public/videos/' . $v . '.mp4"'; ?> type="video/mp4">
+      <source src=<?php echo '"videos/' . $v . '.mp4"'; ?> type="video/mp4">
     </video>
   <?php endforeach ?>
 <?php else: ?>

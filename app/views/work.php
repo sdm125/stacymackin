@@ -1,56 +1,53 @@
-<div class="container-fluid">
-	<header>
-		<h2 class="slide-down-in">WORK</h2>
-	</header>
 
-  <div style="background-image: url('images/mec-bg.jpg');" class="row work mt-5 pt-4 pb-4">
-    <div class="work-overlay"></div>
-    <div class="col-md-8 slide-down-in">
-      <img class="slide-down-in desktop-graphic" src="images/mec.jpg">
-      <img class="slide-down-in mobile-graphic-right" src="images/mec-mobile.png">
-    </div>
-    <div class="col-md-4 slide-down-in">
-      <h2 class="hidden-sm-down">Mackin<br>Engineering<br>Company</h2>
-      <h2 class="hidden-md-up">Mackin Engineering Company</h2>
-      <span class="text-muted">REDESIGNED, RESPONSIVE WEBSITE</span>
-    </div>
-  </div>
+<div class="container">
 
-  <div style="background-image: url('images/upmc-bg.jpg');" class="work row pt-4 pb-4">
-    <div class="work-overlay"></div>
-    <div class="col-md-4 slide-down-in">
-      <h2>University of<br>Pittsburgh</br>Medical Center</h2><br>
-      <span class="text-muted">CONTENT MIGRATION</span>
+  <header>
+    <h2 class="slide-down-in">WORK</h2>
+  </header>
+  <div class="row work mt-5">
+    <div class="col-lg-6">
+      <img src="images/mec-combined.png">
     </div>
-    <div class="col-md-8 slide-down-in">
-      <img class="slide-down-in mobile-graphic-left" src="images/upmc-mobile2.png">
-      <img class="slide-down-in desktop-graphic" src="images/upmc.jpg">
+    <div class="col-lg-6">
+      <h2 class="mt-3">MACKIN ENGINEERING COMPANY</h2>
+      <span>REDESIGNED, RESPONSIVE WEBSITE</span>
+      <p class="mt-3">
+        Proin ut quam pellentesque massa laoreet tempor. Curabitur mauris eros,
+        consectetur vitae nunc eget, faucibus cursus ligula. In hac habitasse platea dictumst.
+        Quisque non ultrices lacus. Sed ut lacus rutrum, rhoncus urna a, commodo eros.
+        Nulla pellentesque neque vel varius pulvinar. Nunc sit amet elit turpis.
+      </p>
+      <a href="http://www.mackinengineering.com" target="_blank"><button>VISIT SITE</button></a>
     </div>
   </div>
 
+  <div class="row work mt-5">
+    <div class="col-lg-6">
+      <img src="images/upmc-combined.png">
+    </div>
+    <div class="col-lg-6">
+      <h2 class="mt-3">UNIVERSITY OF PITTSBURGH MEDICAL CENTER</h2>
+      <span>CONTENT MIGRATION</span>
+      <p class="mt-3">
+        Proin ut quam pellentesque massa laoreet tempor. Curabitur mauris eros,
+        consectetur vitae nunc eget, faucibus cursus ligula. In hac habitasse platea dictumst.
+        Quisque non ultrices lacus. Sed ut lacus rutrum, rhoncus urna a, commodo eros.
+        Nulla pellentesque neque vel varius pulvinar. Nunc sit amet elit turpis.
+      </p>
+    </div>
+  </div>
 
-  <!-- <?php while($project = $this->query->fetch()): ?> -->
-
-    <!-- <div class="row work">
-      <div class="col-md-8">
-        <img class="slide-down-in img-fluid" src=<?php echo '"images/' . $project->images[0] . '"'; ?>>
-        <img class="slide-down-in img-fluid" src=<?php echo '"images/' . $project->images[1] . '"'; ?>>
-      </div>
-      <div class="col-md-4">
-        <div class="work-description">
-          <h5><a href=<?php echo '"' . $project->URL. '" target="_blank"'?>><?php echo $project->title; ?></a></h5>
-          <p><?php echo $project->description; ?></p>
+  <div style="position:relative;" class="row">
+    <div style="margin:auto;" class="col-lg-4 col-md-6 clearfix">
+      <i class="arrow fa fa-long-arrow-left fa-5x pull-left" aria-hidden="true"></i>
+        <div style="margin:auto;height:20px;width:43px;position:absolute;right:0;left:0;top:0;bottom:0;">
+          <i class="indicator fa fa-circle fa-lg" aria-hidden="true"></i>
+          <i class="indicator fa fa-circle-o fa-lg" aria-hidden="true"></i>
         </div>
-      </div>
+      <i class="arrow fa fa-long-arrow-right fa-5x pull-right" aria-hidden="true"></i>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        <img class="slide-down-in img-fluid" src=<?php echo '"images/' . $project->images[2] . '"'; ?>>
-      </div>
-      <div class="col-md-6">
-        <img class="slide-down-in img-fluid" src=<?php echo '"images/' . $project->images[3] . '"'; ?>>
-      </div>
-    </div> -->
-  <!-- <?php endwhile ?> -->
+  </div>
 
 </div>
+
+<div style="width:100%;height:25px;"></div>
