@@ -1,3 +1,4 @@
+Options -Multiviews
 RewriteEngine On
 
 RewriteBase /stacymackin/
@@ -5,4 +6,4 @@ RewriteBase /stacymackin/
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+RewriteRule ^(.+)$ /stacymackin/public/index.php?url=$1 [QSA,L]
