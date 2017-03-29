@@ -5,7 +5,6 @@ RewriteBase /stacymackin/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
-#RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
-#Heroku way
-RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
