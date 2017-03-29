@@ -3,9 +3,9 @@ RewriteEngine On
 
 RewriteBase /stacymackin/
 
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{HTTPS} !=on
 
-#RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
