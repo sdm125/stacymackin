@@ -3,6 +3,7 @@ RewriteEngine On
 
 RewriteBase /stacymackin/
 
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+RewriteRule ^(.+)$ /stacymackin/index.php?url=$1 [QSA,L]
