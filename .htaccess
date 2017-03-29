@@ -1,4 +1,9 @@
 Options -Multiviews
 RewriteEngine On
 
+RewriteBase /stacymackin
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
 RewriteRule ^(.*)$ public/$1 [L]
