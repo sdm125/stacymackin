@@ -1,7 +1,7 @@
 #Options -Multiviews
 RewriteEngine On
 
-RewriteBase /stacymackin/
+#RewriteBase /stacymackin/
 
 # If we receive a forwarded http request from a proxy...
 RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
