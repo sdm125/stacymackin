@@ -3,7 +3,6 @@ RewriteEngine On
 
 RewriteBase /stacymackin/
 
-
 # If we receive a forwarded http request from a proxy...
 RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
 
