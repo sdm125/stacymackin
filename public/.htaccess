@@ -1,11 +1,15 @@
-Options -Multiviews
-RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#Options -Multiviews
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
 #RewriteBase /stacymackin/
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+#RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]*)$ /index.php?id=$1 [L]
