@@ -10,6 +10,7 @@
 
 #RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
 
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]*)$ public/index.php?id=$1 [L]
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteRule ^([^/]+) index.php?id=$1 [L]
+</IfModule>
