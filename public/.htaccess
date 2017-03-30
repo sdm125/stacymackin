@@ -1,8 +1,9 @@
 Options -Multiviews
 RewriteEngine On
+RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
-RewriteBase /stacymackin/public/
+RewriteBase /stacymackin/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
