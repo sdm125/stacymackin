@@ -1,9 +1,9 @@
-DirectoryIndex index.php
+Options -Multiviews
+RewriteEngine On
 
-RewriteEngine on
-RewriteBase /
+RewriteBase /stacymackin/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
