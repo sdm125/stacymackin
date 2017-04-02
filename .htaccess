@@ -1,4 +1,6 @@
+Options -Indexes
 RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
 RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]

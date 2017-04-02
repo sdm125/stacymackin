@@ -1,5 +1,6 @@
 Options -Indexes
 RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} !https 
 
 RewriteBase /stacymackin/
 
