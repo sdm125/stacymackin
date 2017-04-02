@@ -1,8 +1,7 @@
-Options -Multiviews
+Options -Indexes
 RewriteEngine On
-RewriteCond %{HTTP:X-Forwarded-Proto} .
 
-RewriteBase stacymackin.herokuapp.com/
+RewriteBase /stacymackin/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
