@@ -1,5 +1,6 @@
 Options -Multiviews
 RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} .
 
 RewriteBase /stacymackin/
 
