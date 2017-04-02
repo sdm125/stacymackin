@@ -26,6 +26,6 @@
 
 nav.home a {
   font-size: 13vw;
-  color: #fff;
+  color: #fff !important;
   opacity: .9;
 }

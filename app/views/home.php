@@ -9,8 +9,8 @@
     </video>
   <?php endforeach ?>
 <?php else: ?>
-  <?php echo '<link rel="stylesheet" href="../public/styles/mobile.css">' ?>
-  <img id="mobile-bg" src="../public/images/mobile-bg.gif">
+  <?php echo '<link rel="stylesheet" href="styles/mobile.css">' ?>
+  <img id="mobile-bg" src="images/mobile-bg.gif">
 <?php endif ?>
 
 <div class="container-fluid home">
