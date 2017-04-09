@@ -109,7 +109,7 @@ $(document).ready(function() {
   var contactInput = (function(){
     // Returns an array of text inputs that are empty.
     var numEmpty = function() {
-      var inputs = $('input[type="text"], textarea'),
+      var inputs = $('input[type="text"], input[type="email"], textarea'),
       empty = inputs.filter(function(_, elem){
         return elem.value === '';
       });
@@ -133,7 +133,7 @@ $(document).ready(function() {
    * Checks text inputs on focus. If there are other empty inputs, it slides out
    * their label and slides in the placeholder text.
    */
-  $('input[type="text"], textarea').on('focus', function() {
+  $('input[type="text"], input[type="email"], textarea').on('focus', function() {
     var empty = contactInput.numEmpty();
     if(empty.length > 0) {
       empty.each(function(_, elem){

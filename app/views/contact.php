@@ -4,13 +4,13 @@
 <div class="container about">
   <form id="contactForm" method="post" action="" class="slide-down-in">
     <fieldset>
-      <?php $fields = array('First Name' => 'first', 'Last Name' => 'last', 'Email' => 'email'); ?>
+      <?php $fields = array('First Name' => ['first','text'], 'Last Name' => ['last','text'], 'Email' => ['email','email']); ?>
       <?php foreach($fields as $key => $value): ?>
         <label class="name-input">
           <div class="title">
             <p class="hide-labels"><?php echo $key ?></p>
           </div>
-          <input type="text" name=<?php echo '"' . $value . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?>>
+          <input type=<?php echo '"' . $value[1] . '"'; ?> name=<?php echo '"' . $value[0] . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?>>
         </label>
       <?php endforeach ?>
     </fieldset>

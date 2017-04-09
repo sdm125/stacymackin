@@ -408,7 +408,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder  {
   transition: text-indent 250ms;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   font-size: 1.8rem;
 }
 
