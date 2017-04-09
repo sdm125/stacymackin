@@ -8,8 +8,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-    <script src="public/js/jquery.scrollify.js"></script>
-    <script src="public/js/about.js"></script>
-    <script src="public/js/script.js"></script>
+    <script src="js/jquery.scrollify.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
