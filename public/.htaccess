@@ -1,7 +1,7 @@
 Options -Multiviews
 RewriteEngine On
 
-RewriteBase public/
+RewriteBase /
 
 RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteCond %{REQUEST_FILENAME} !-d
