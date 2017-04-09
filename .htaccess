@@ -1,6 +1,6 @@
 Options -Multiviews
 RewriteEngine On
-#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
 RewriteBase /stacymackin/
 

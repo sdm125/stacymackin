@@ -8,6 +8,6 @@
     <script src="https://use.fontawesome.com/1b2c73576a.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:700">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="public/styles/style.css">
 	</head>
 	<body class="preload">
