@@ -1,7 +1,7 @@
 Options -Multiviews
 RewriteEngine On
 
-RewriteBase /stacymackin/public/
+#RewriteBase /stacymackin/public/
 
 RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteCond %{REQUEST_FILENAME} !-d
