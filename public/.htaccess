@@ -2,10 +2,10 @@ Options -Multiviews
 RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
-RewriteBase /stacymackin/
+RewriteBase /public/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+RewriteRule ^(.+)$ /index.php?url=$1 [QSA,L]
