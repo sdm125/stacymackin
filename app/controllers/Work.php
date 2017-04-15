@@ -1,6 +1,6 @@
 <?php
 
-require_once '../app/ConnectDB.php';
+// require_once '../app/ConnectDB.php';
 
 class Work extends Controller
 {
