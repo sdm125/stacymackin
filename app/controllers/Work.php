@@ -5,13 +5,12 @@ require_once '../app/ConnectDB.php';
 class Work extends Controller
 {
 
-  public $handler, $query;
+  public $handler, $query, $results;
 
   public function __construct()
   {
-    $this->model('ProjectData');
-    $this->query = ConnectDB::connect()->query('SELECT * FROM work');
-    $this->query->setFetchMode(PDO::FETCH_CLASS, 'ProjectData');
+    // $this->query = ConnectDB::connect()->query('SELECT * FROM work');
+    // $this->results = $this->query->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function index()
