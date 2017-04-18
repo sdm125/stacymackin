@@ -5,7 +5,7 @@
     <h2 class="slide-down-in">WORK</h2>
   </header>
 
-  <!-- <?php foreach($this->results as $project): ?>
+  <?php foreach($this->results as $project): ?>
     <div class="row work mt-5">
       <div class="col-lg-6">
         <img src=<?php echo "images/" . $project["image"]; ?>>
@@ -21,9 +21,9 @@
         <?php endif; ?>
       </div>
     </div>
-  <?php endforeach ?> -->
+  <?php endforeach ?>
 
-  <div class="row work mt-5">
+  <!-- <div class="row work mt-5">
     <div class="col-lg-6">
       <img src="images/mec-combined.png">
     </div>
@@ -51,7 +51,7 @@
       Worked on UPMC Infonet team to build a new responsive SharePoint website that provides news and information to all 60,000 members of the UPMC staff. Tested mobile responsiveness of styling and formatting.  Created a JavaScript program that takes a filename as input and outputs the name in the correct naming convention format. Produced web browser macros to automate repetitive tasks.
     </p>
   </div>
-</div>
+</div> -->
 
   <div style="position:relative;" class="row">
     <div style="margin:auto;" class="col-lg-4 col-md-6 clearfix">
