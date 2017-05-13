@@ -345,7 +345,7 @@ video {
 }
 
 .contact a, .contact .fa {
-  color: #000
+  color: #292b2c;
 }
 
 div.alert {
@@ -605,9 +605,6 @@ button:hover {
 
 #about-five h2 a {
   color: #fff;
-}
-
-#about-five h2 a:hover {
   text-decoration: none !important;
 }
 

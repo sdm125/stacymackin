@@ -29,8 +29,8 @@
 </section>
 
 <section class="about" id="about-five">
-  <h2><a href="./documents/StacyMackinResume.pdf" target="_blank">
-    <?php $resume = array('V', 'i', 'e', 'w', '&nbsp;', 'm', 'y', '&nbsp;' ,'r', 'e', 's', 'u', 'm', 'e'); ?>
+  <h2><a href="https://github.com/sdm125" target="_blank">
+    <?php $resume = array('V', 'i', 'e', 'w', '&nbsp;', 'm', 'y', '&nbsp;' ,'G', 'i', 't', 'h', 'u', 'b'); ?>
     <?php foreach($resume as $letter): ?>
       <span class="stagger"><?php echo $letter ?></span>
     <?php endforeach ?>

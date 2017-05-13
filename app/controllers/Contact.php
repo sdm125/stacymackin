@@ -37,6 +37,8 @@ class Contact extends Controller
       ':message' => $message
     ));
 
+    mail('stacy.mackin@gmail.com', $firstName . ' ' . $lastName . ' sent a message', $message);
+
   }
 
 }
