@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <form id="contactForm" method="post" action="" class="slide-down-in">
+  <form id="contactForm" method="post" action="" class="slide-down-in" autocomplete="off">
     <fieldset>
       <div class="row">
         <?php $fields = array('First Name' => ['first','text'], 'Last Name' => ['last','text'], 'Email' => ['email','email']); ?>
@@ -23,7 +23,7 @@
                 <p class="hide-labels"><?php echo $key ?></p>
               </div>
               <input type=<?php echo '"' . $value[1] . '"'; ?> name=<?php echo '"' . $value[0]
-              . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?> autocomplete="off">
+              . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?>>
             </label>
           </div>
         <?php endforeach ?>
