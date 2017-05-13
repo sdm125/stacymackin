@@ -397,7 +397,23 @@ label input {
   border-bottom: 2px solid #000;
   margin: auto;
   padding: 5px 5px 0 5px;
-  /*width: 250px;*/
+  /*width: 100%;*/
+}
+
+@media screen and (max-width: 410px) {
+
+  .about header h2 {
+    font-size: 19vw;
+  }
+
+}
+
+@media screen and (max-width: 340px) {
+
+  #contactForm label input {
+    width: 100%;
+  }
+
 }
 
 input:focus, button:focus {
@@ -417,6 +433,8 @@ textarea {
 textarea {
   border: 2px solid #000;
   border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
 }
 
 textarea:focus {
