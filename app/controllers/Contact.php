@@ -25,8 +25,6 @@ class Contact extends Controller
     $email = (!empty($_POST['email']) ? $_POST['email'] : '');
     $message = (!empty($_POST['message']) ? $_POST['message'] : '');
 
-    mail('stacy.mackin@gmail.com', $firstName . ' ' . $lastName . ' sent a message', $message);
-
     $sql = "INSERT INTO contact (firstName, lastName, email, message)
     VALUES(:firstName, :lastName, :email, :message)";
 
@@ -38,6 +36,8 @@ class Contact extends Controller
       ':email' => $email,
       ':message' => $message
     ));
+
+    mail('stacy.mackin@gmail.com', $firstName . ' ' . $lastName . ' sent a message', $message);
 
   }
 

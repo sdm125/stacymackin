@@ -17,7 +17,9 @@
           <?php echo $project["description"]; ?>
         </p>
         <?php if($project["url"]): ?>
-          <a href=<?php echo "\"" . $project["url"] . "\""; ?> target="_blank"><button>VISIT SITE</button></a>
+          <a href=<?php echo "\"" . $project["url"] . "\""; ?> target="_blank">
+            <button class="hidden-sm-up btn-block">VISIT SITE</button>
+            <button class="hidden-xs-down">VISIT SITE</button></a>
         <?php endif; ?>
       </div>
     </div>
