@@ -340,8 +340,12 @@ video {
   width: 142px;
 }
 
-.container.about {
+.container.contact {
   text-align: center;
+}
+
+.contact a, .contact .fa {
+  color: #000
 }
 
 div.alert {
@@ -397,21 +401,13 @@ label input {
   border-bottom: 2px solid #000;
   margin: auto;
   padding: 5px 5px 0 5px;
-  /*width: 100%;*/
+  width: 100%;
 }
 
 @media screen and (max-width: 410px) {
 
-  .about header h2 {
+  .contact header h2 {
     font-size: 19vw;
-  }
-
-}
-
-@media screen and (max-width: 412px) {
-
-  #contactForm label input {
-    width: 95%;
   }
 
 }
