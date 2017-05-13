@@ -22,7 +22,7 @@
               <div class="title">
                 <p class="hide-labels"><?php echo $key ?></p>
               </div>
-              <input type=<?php echo '"' . $value[1] . '"'; ?> name=<?php echo '"' . $value[0]
+              <input autocomplete="off" type=<?php echo '"' . $value[1] . '"'; ?> name=<?php echo '"' . $value[0]
               . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?>>
             </label>
           </div>
