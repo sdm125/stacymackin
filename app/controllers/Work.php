@@ -5,7 +5,7 @@ require_once '../app/ConnectDB.php';
 class Work extends Controller
 {
 
-  public $handler, $query, $results;
+  public $query, $results;
 
   public function __construct()
   {
