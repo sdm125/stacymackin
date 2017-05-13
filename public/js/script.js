@@ -191,7 +191,7 @@ $(document).ready(function() {
     }
     else {
       $.ajax({
-        url: '/insert',
+        url: 'contact/insert',
         type: 'POST',
         data: $('#contactForm').serialize(),
         success: function() {
