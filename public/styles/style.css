@@ -408,7 +408,7 @@ label input {
 
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 350px) {
 
   #contactForm label input {
     width: 100%;

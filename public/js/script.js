@@ -215,14 +215,16 @@ $(document).ready(function() {
   (function(){
     var width = $(window).width(),
     setWorkHeight = function(){
-      $('.work').css('height', 'auto');
-      var tallest = $('.work').get(0).offsetHeight;
-      $('.work').each(function(_, elem){
-        if(elem.offsetHeight > tallest){
-          tallest = elem.offsetHeight;
-        }
-      });
-      $('.work').css('height', tallest + 50);
+      if($('.work').length){
+        $('.work').css('height', 'auto');
+        var tallest = $('.work').get(0).offsetHeight;
+        $('.work').each(function(_, elem){
+          if(elem.offsetHeight > tallest){
+            tallest = elem.offsetHeight;
+          }
+        });
+        $('.work').css('height', tallest + 50);
+      }
     };
     if($('.work').length > 0){
       setWorkHeight();
