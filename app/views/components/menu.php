@@ -1,9 +1,10 @@
-<nav class="pull-left pop pop-in">;
+
+<nav class="pull-left not-home">
   <ul>
     <?php
-      $nav = array('index'=>'Home', 'about'=>'About', 'work'=>'Work', 'contact'=>'Contact');
-      foreach($nav as $n => $l) {
-        echo '<li id="#' . $n . '"><a href="' . $n . '">'. $l . '</a></li>';
+      $nav = array('index'=>'HOME', 'about'=>'ABOUT', 'work'=>'WORK', 'contact'=>'CONTACT');
+      foreach($nav as $name => $link) {
+        echo '<li id="#' . $name . '"><a href="' . $name . '">'. $link . '</a></li>';
       }
     ?>
   </ul>

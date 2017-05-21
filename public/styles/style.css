@@ -84,16 +84,10 @@ header h2 {
 /***** Nav *****/
 
 nav a {
-  color: #aaa !important;
-  opacity: .7;
+  color: #000;
+  opacity: .95;
 	-webkit-transition: color 400ms;
 	transition: color 400ms;
-}
-
-nav a:hover {
-  opacity: .95;
-	color: #fff !important;
-  text-decoration: none;
 }
 
 nav a:focus {
@@ -104,10 +98,23 @@ nav li {
 	list-style: none;
 }
 
+nav.home a {
+  color: #bfbfbf;
+}
+
+nav.home a:hover {
+  opacity: 1;
+	color: #fff !important;
+  text-decoration: none;
+}
+
 nav.home ul {
+  text-align: left;
   font-size: 7vw;
   position: relative;
 	padding-left: 1.5vw;
+  color: #fff;
+  opacity: .93;
 }
 
 @media screen and (max-width: 768px) {
@@ -126,35 +133,38 @@ nav.home ul {
 
 }
 
-nav.pop {
-	background-color: #000	;
+nav.not-home {
+	background-color: #fff;
 	height: 100vh;
-	opacity: .9;
+	opacity: 0;
 	position: fixed;
-	-webkit-transition: transform 500ms;
-	transition: transform 500ms;
+	-webkit-transition: transform 500ms, opacity 500ms, filter 700ms;
+	transition: transform 500ms, opacity 500ms, filter 700ms;
 	width: 100vw;
-  z-index: 1000;
+  z-index: 10;
+  filter: blur(20px);
 }
 
-nav.pop a {
-	font-size: 2rem;
+nav.not-home a {
+	font-size: 5rem;
+  font-weight: bold;
 	padding: 10px;
 }
 
-nav.pop ul {
+nav.not-home a:hover {
+  text-decoration: none !important;
+  color: #999;
+}
+
+nav.not-home ul {
+  text-align: center;
+}
+
+nav.not-home ul {
+  font-size: 50rem;
+  transition: font-size 400ms;
 	margin-top: 4rem;
 	padding-left: 0;
-}
-
-.pop-in {
-	-webkit-transform: translateX(-100vw);
-	transform: translateX(-100vw);
-}
-
-.pop-out {
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
 }
 
 /*
@@ -166,7 +176,7 @@ nav.pop ul {
   position: fixed;
 	padding-top: 10px;
 	margin-left: 10px;
-  z-index: 10000;
+  z-index: 1000000;
 }
 
 .bar1, .bar2, .bar3 {
@@ -348,6 +358,20 @@ video {
   color: #292b2c;
 }
 
+.contact a {
+  text-decoration: none;
+}
+
+.contact a:hover {
+  transition: font-weight 300ms;
+  font-weight: bold;
+}
+
+.contact .fa:hover {
+  transition: transform 300ms;
+  transform: scale(1.2);
+}
+
 div.alert {
   position: absolute;
   height: 50px;
@@ -442,8 +466,6 @@ textarea:focus {
 }
 
 button {
-  /*display: block;*/
-  /*margin: auto;*/
   background: #FFF;
   border: 2px solid #000;
   border-radius: 5px;
@@ -672,6 +694,24 @@ footer small {
 
 .arrow:hover {
   color: #777;
+}
+
+/***** Work *****/
+
+#workNav {
+  position: relative;
+}
+
+#workNav > div {
+  margin: auto;
+}
+
+#workIndicators {
+  position: absolute;
+  right:0; left:0; top:0; bottom:0;
+  margin:auto;
+  height:20px;
+  width:43px;
 }
 
 /* work button */

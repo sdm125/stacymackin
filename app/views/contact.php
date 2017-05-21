@@ -5,10 +5,10 @@
 
   <div class="row mt-5 slide-down-in">
     <div class="col-6">
-      <a href="https://github.com/sdm125" target="_blank"><i class="fa fa-5x fa-github" aria-hidden="true"></i><br>Github</a>
+      <a href="https://github.com/sdm125" target="_blank"><i class="fa fa-5x fa-github mb-1" aria-hidden="true"></i><br>Github</a>
     </div>
     <div class="col-6">
-      <a href="mailto:stacy.mackin@gmail.com"><i class="fa fa-5x fa-envelope" aria-hidden="true"></i><br>Email</a>
+      <a href="mailto:stacy.mackin@gmail.com"><i class="fa fa-5x fa-envelope mb-1" aria-hidden="true"></i><br>Email</a>
     </div>
   </div>
 
