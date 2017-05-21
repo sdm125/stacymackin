@@ -11,7 +11,7 @@ $(document).ready(function() {
     var navList = $('nav ul');
     var container = $('.container').length > 0 ? $('.container') : $('section');
 		if(nav.css('opacity') == 0){
-      nav.css({'filter':'blur(0)','opacity':'.6','z-index':'10000'});
+      nav.css({'filter':'blur(0)','opacity':'.6','z-index':'99'});
       navList.css('font-size','5rem');
       container.css('filter','blur(10px)');
 		}

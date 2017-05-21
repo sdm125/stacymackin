@@ -141,7 +141,7 @@ nav.not-home {
 	-webkit-transition: transform 500ms, opacity 500ms, filter 700ms;
 	transition: transform 500ms, opacity 500ms, filter 700ms;
 	width: 100vw;
-  z-index: 10;
+  z-index: -1;
   filter: blur(20px);
 }
 
@@ -176,7 +176,7 @@ nav.not-home ul {
   position: fixed;
 	padding-top: 10px;
 	margin-left: 10px;
-  z-index: 1000000;
+  z-index: 100;
 }
 
 .bar1, .bar2, .bar3 {
