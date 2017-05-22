@@ -60,7 +60,7 @@ section {
   margin: auto;
 }
 
-h1, h2, nav.home {
+h1, h2, nav {
   font-family: 'Rubik', sans-serif;
 }
 
@@ -144,7 +144,7 @@ nav.not-home {
 	-webkit-transition: transform 500ms, opacity 500ms, blur 700ms;
 	transition: transform 500ms, opacity 500ms, filter 700ms;
 	width: 100vw;
-  z-index: 101;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,7 +169,15 @@ nav.not-home a {
 nav.not-home a:hover {
   text-decoration: none !important;
   color: #eee;
-  text-shadow: 1px 0 5px #000;
+  text-shadow: 1px 0 1px #000;
+}
+
+@media screen and (max-width: 400px) {
+
+    nav.not-home a {
+      font-size: 20vw;
+    }
+
 }
 
 nav.not-home ul {
