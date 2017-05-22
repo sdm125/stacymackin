@@ -20,7 +20,7 @@ $(document).ready(function() {
       nav.addClass('hide-nav').removeClass('show-nav');
       setTimeout(function(){
         nav.css('z-index','-1');
-      }, 1000);
+      }, 500);
       navList.css('font-size','50rem');
       container.css('filter','blur(0)');
 		}
