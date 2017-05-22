@@ -1,5 +1,5 @@
 
-<nav class="pull-left not-home">
+<nav class="pull-left not-home hide-nav">
   <ul>
     <?php
       $nav = array('index'=>'HOME', 'about'=>'ABOUT', 'work'=>'WORK', 'contact'=>'CONTACT');

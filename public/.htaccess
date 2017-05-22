@@ -1,8 +1,8 @@
 Options -Multiviews
 RewriteEngine On
 
-#RewriteBase /stacymackin/public
-RewriteBase /
+RewriteBase /stacymackin/public
+#RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f

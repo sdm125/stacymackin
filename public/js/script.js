@@ -10,18 +10,15 @@ $(document).ready(function() {
 		var nav = $('nav');
     var navList = $('nav ul');
     var container = $('.container').length > 0 ? $('.container') : $('section');
-		if(nav.css('opacity') == 0){
-      nav.css({'filter':'blur(0)','opacity':'.6','z-index':'99'});
+		if(nav.hasClass('hide-nav')){
+      nav.addClass('show-nav').removeClass('hide-nav');
       navList.css('font-size','5rem');
-      container.css('filter','blur(10px)');
+      container.css('filter','blur(40px)');
 		}
 		else {
-      nav.css({'filter':'blur(20px)','opacity':'0'});
-      setTimeout(function(){
-        nav.css('z-index','-1');
-      }, 1000);
+      nav.addClass('hide-nav').removeClass('show-nav');
       navList.css('font-size','50rem');
-      container.css('filter','none');
+      container.css('filter','blur(0)');
 		}
 		$(this).toggleClass('change');
 	});
