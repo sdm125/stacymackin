@@ -18,7 +18,9 @@ $(document).ready(function() {
 		}
 		else {
       nav.addClass('hide-nav').removeClass('show-nav');
-      nav.css('z-index','-1');
+      setTimeout(function(){
+        nav.css('z-index','-1');
+      }, 1000);
       navList.css('font-size','50rem');
       container.css('filter','blur(0)');
 		}
