@@ -1,11 +1,14 @@
-$(document).ready(function() {
+(function() {
 
   $(window).load(function() {
     $('#loadContainer').hide();
     $("body").removeClass("preload");
   });
 
-  /********** MENU **********/
+  /******************************************
+  ******************* MENU ******************
+  *******************************************/
+
 	$('.menu-btn').on('click', function() {
 		var nav = $('nav');
     var navList = $('nav ul');
@@ -27,7 +30,10 @@ $(document).ready(function() {
 		$(this).toggleClass('change');
 	});
 
-  /********** HOME **********/
+  /******************************************
+  ******************* HOME ******************
+  *******************************************/
+
   var homeVideo = (function() {
     var on = function(video, headerColor) {
       $(video).fadeIn('fast').get(0).play();
@@ -109,7 +115,71 @@ $(document).ready(function() {
     }, 1500);
 	});
 
-  /********** CONTACT **********/
+  /******************************************
+  ******************* WORK ******************
+  *******************************************/
+
+  (function(){
+    var width = $(window).width(),
+    setWorkHeight = function(){
+      if($('.work').length){
+        $('.work').css('height', 'auto');
+        var tallest = $('.work').get(0).offsetHeight;
+        $('.work').each(function(_, elem){
+          if(elem.offsetHeight > tallest){
+            tallest = elem.offsetHeight;
+          }
+        });
+        $('.work').css('height', tallest + 50);
+      }
+    };
+    if($('.work').length > 0){
+      setWorkHeight();
+    }
+
+    $(window).on('resize', function(){
+      if(width != $(window).width()){
+        width = $(window).width();
+        setWorkHeight();
+      }
+    });
+  })();
+
+  (function(){
+    if($('.work').length > 0){
+      var i = 0,
+      work = $('.work'),
+      indicators = $('.indicator');
+      work[i].classList.add('active');
+    }
+    $('.arrow').on('click', function(){
+      if($(this).hasClass('fa-long-arrow-left')){
+        if(i > 0){
+          indicators[i].classList.remove('fa-circle');
+          indicators[i].classList.add('fa-circle-o');
+          work[i--].classList.remove('active');
+          work[i].classList.add('active');
+          indicators[i].classList.add('fa-circle');
+          indicators[i].classList.remove('fa-circle-o');
+        }
+      }
+      else if($(this).hasClass('fa-long-arrow-right')){
+        if(i < work.length - 1){
+          indicators[i].classList.add('fa-circle-o');
+          indicators[i].classList.remove('fa-circle');
+          work[i++].classList.remove('active');
+          work[i].classList.add('active');
+          indicators[i].classList.add('fa-circle');
+          indicators[i].classList.remove('fa-circle-o');
+        }
+      }
+    });
+  })();
+
+  /******************************************
+  ***************** CONTACT *****************
+  *******************************************/
+
   var contactInput = (function(){
     // Returns an array of text inputs that are empty.
     var numEmpty = function() {
@@ -179,18 +249,26 @@ $(document).ready(function() {
       if($('.errors').length > 0){
         $('.errors').remove();
       }
-      $('form').append('<p class="errors">Please fill in your:</p>');
+      $('form').append('<div class="errors alert alert-danger text-center" role="alert">Please fill in your:</div>');
       empty.each(function(_, elem){
         var errors = $('.errors');
+        var errorName;
         contactInput.highlightEmpty(elem);
         // Appends empty input names to errors element.
         if(elem.name !== 'message' && elem.name !== 'email'){
-          errors.append('<br>' + capitolize(elem.name) + ' Name');
+          errorName = '<br>' + capitolize(elem.name) + ' Name';
+          errors.append(errorName);
         }
         else {
-          errors.append('<br>' + capitolize(elem.name));
+          errorName = '<br>' + capitolize(elem.name);
+          errors.append(errorName);
         }
       });
+      $('body').on('click', function(){
+        if($('.errors').length > 0){
+          $('.errors').fadeOut();
+        }
+      })
       return false;
     }
     else {
@@ -212,65 +290,4 @@ $(document).ready(function() {
     }
   });
 
-  /**
-   * Work
-   */
-
-  (function(){
-    var width = $(window).width(),
-    setWorkHeight = function(){
-      if($('.work').length){
-        $('.work').css('height', 'auto');
-        var tallest = $('.work').get(0).offsetHeight;
-        $('.work').each(function(_, elem){
-          if(elem.offsetHeight > tallest){
-            tallest = elem.offsetHeight;
-          }
-        });
-        $('.work').css('height', tallest + 50);
-      }
-    };
-    if($('.work').length > 0){
-      setWorkHeight();
-    }
-
-    $(window).on('resize', function(){
-      if(width != $(window).width()){
-        width = $(window).width();
-        setWorkHeight();
-      }
-    });
-  })();
-
-  (function(){
-    if($('.work').length > 0){
-      var i = 0,
-      work = $('.work'),
-      indicators = $('.indicator');
-      work[i].classList.add('active');
-    }
-    $('.arrow').on('click', function(){
-      if($(this).hasClass('fa-long-arrow-left')){
-        if(i > 0){
-          indicators[i].classList.remove('fa-circle');
-          indicators[i].classList.add('fa-circle-o');
-          work[i--].classList.remove('active');
-          work[i].classList.add('active');
-          indicators[i].classList.add('fa-circle');
-          indicators[i].classList.remove('fa-circle-o');
-        }
-      }
-      else if($(this).hasClass('fa-long-arrow-right')){
-        if(i < work.length - 1){
-          indicators[i].classList.add('fa-circle-o');
-          indicators[i].classList.remove('fa-circle');
-          work[i++].classList.remove('active');
-          work[i].classList.add('active');
-          indicators[i].classList.add('fa-circle');
-          indicators[i].classList.remove('fa-circle-o');
-        }
-      }
-    });
-  })();
-
-});
+})();

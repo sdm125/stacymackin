@@ -1,3 +1,7 @@
+<div id="landscape-cover" class="hidden-xl-down text-center">
+  <h2>Landscape not supported on this page</h2>
+  <i class="fa fa-refresh fa-spin fa-3x fa-fw text-center"></i>
+</div>
 <section class="about" id="about-one">
   <header>
     <h2 class="slide-down-in about">ABOUT</h2>
