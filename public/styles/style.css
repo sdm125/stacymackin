@@ -238,19 +238,12 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
-  -webkit-transform: translateX(-50%) translateY(-40%);
-	transform: translateX(-50%) translateY(-40%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 #workVideo, #aboutVideo, #contactVideo {
 	display: none;
-}
-
-@media screen and (max-width: 810px) {
-  video {
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
 }
 
 #about.home, #work.home, #contact.home {
