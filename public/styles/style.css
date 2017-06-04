@@ -151,13 +151,39 @@ nav.not-home {
 }
 
 .hide-nav {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   filter: blur(20px);
   opacity: 0;
 }
 
 .show-nav {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
   filter: blur(0px);
   opacity: .75;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .show-nav {
+    opacity: .95 !important;
+    background: #eee !important;
+  }
+}
+
+.blur-background {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  filter: blur(40px);
 }
 
 nav.not-home a {

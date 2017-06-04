@@ -25,7 +25,7 @@
     </div>
   <?php endforeach ?>
 
-  <div id="workNav" class="row slide-down-in">
+  <div id="workNav" class="row slide-down-in mt-3">
     <div class="col-lg-4 col-md-6 clearfix">
       <i class="arrow fa fa-long-arrow-left fa-5x pull-left" aria-hidden="true"></i>
         <div id="workIndicators">

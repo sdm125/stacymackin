@@ -17,7 +17,7 @@
       nav.css('z-index','101');
       nav.addClass('show-nav').removeClass('hide-nav');
       navList.css('font-size','5rem');
-      container.css('filter','blur(40px)');
+      container.addClass('blur-background');
 		}
 		else {
       nav.addClass('hide-nav').removeClass('show-nav');
@@ -25,7 +25,7 @@
         nav.css('z-index','-1');
       }, 500);
       navList.css('font-size','50rem');
-      container.css('filter','blur(0)');
+      container.removeClass('blur-background');
 		}
 		$(this).toggleClass('change');
 	});
@@ -123,20 +123,20 @@
     var width = $(window).width(),
     setWorkHeight = function(){
       setTimeout(function(){
-        var work = $('.work');
-        work.css('height', 'auto');
-        var tallest = work[0].offsetHeight;
-        work.each(function(_, elem){
-          if(elem.offsetHeight > tallest){
-            tallest = elem.offsetHeight;
-          }
-        });
-        work.css('height', tallest);
+        if($('.work').length > 0){
+          var work = $('.work');
+          work.css('height', 'auto');
+          var tallest = work[0].offsetHeight;
+          work.each(function(_, elem){
+            if(elem.offsetHeight > tallest){
+              tallest = elem.offsetHeight;
+            }
+          });
+          work.css('height', tallest);
+        }
       }, 200);
     };
-    if($('.work').length > 0){
-      setWorkHeight();
-    }
+    setWorkHeight();
 
     $(window).on('resize', function(){
       if(width != $(window).width()){
