@@ -122,16 +122,17 @@
   (function(){
     var width = $(window).width(),
     setWorkHeight = function(){
-      if($('.work').length){
-        $('.work').css('height', 'auto');
-        var tallest = $('.work').get(0).offsetHeight;
-        $('.work').each(function(_, elem){
+      setTimeout(function(){
+        var work = $('.work');
+        work.css('height', 'auto');
+        var tallest = work[0].offsetHeight;
+        work.each(function(_, elem){
           if(elem.offsetHeight > tallest){
             tallest = elem.offsetHeight;
           }
         });
-        $('.work').css('height', tallest + 50);
-      }
+        work.css('height', tallest);
+      }, 200);
     };
     if($('.work').length > 0){
       setWorkHeight();
