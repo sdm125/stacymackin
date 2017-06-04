@@ -82,7 +82,7 @@ h1 span {
 header h2 {
 	font-size: 5rem;
   margin-top: 0;
-  padding-top: 50px;
+  padding-top: 5rem;
 	text-align: center;
 }
 
@@ -441,11 +441,9 @@ video {
 }
 
 .work {
-  visibility: hidden;
-  position: absolute;
-  transform: scale(0);
+  display: none;
   opacity: 0;
-  transition: opacity 1s ease, transform 500ms;
+  align-items: center;
 }
 
 .work img {
@@ -453,11 +451,25 @@ video {
 }
 
 .active {
-  visibility: visible;
-  position: relative !important;
-  transform: scale(1);
-  align-items: center;
-  opacity: 1;
+  display: flex;
+  -webkit-animation-fill-mode: forwards !important;
+  animation-fill-mode: forwards !important;
+}
+
+@keyframes grow {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .arrow {

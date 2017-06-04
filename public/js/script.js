@@ -159,7 +159,8 @@
           indicators[i].classList.remove('fa-circle');
           indicators[i].classList.add('fa-circle-o');
           work[i--].classList.remove('active');
-          work[i].classList.add('active');
+          work[i].classList.add('active')
+          work[i].style.animation = 'grow 300ms ease-in-out';
           indicators[i].classList.add('fa-circle');
           indicators[i].classList.remove('fa-circle-o');
         }
@@ -169,6 +170,7 @@
           indicators[i].classList.add('fa-circle-o');
           indicators[i].classList.remove('fa-circle');
           work[i++].classList.remove('active');
+          work[i].style.animation = 'grow 300ms ease-in-out';
           work[i].classList.add('active');
           indicators[i].classList.add('fa-circle');
           indicators[i].classList.remove('fa-circle-o');
