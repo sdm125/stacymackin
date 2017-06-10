@@ -187,7 +187,7 @@ $(document).ready(function(){
       }
     });
 
-    // Scene 4  Resume
+    // Scene 4  Github
     scrollMagicData.scenes[7] = new ScrollMagic.Scene({
       triggerElement: '#about-five'
     })
@@ -201,7 +201,7 @@ $(document).ready(function(){
       }
     });
 
-    // Scene 4  Resume
+    // Scene 4  Github
     scrollMagicData.scenes[8] = new ScrollMagic.Scene({
       triggerElement: '#about-five',
       duration: 0

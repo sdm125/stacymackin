@@ -12,7 +12,8 @@
 	$('.menu-btn').on('click', function() {
 		var nav = $('nav');
     var navList = $('nav ul');
-    var container = $('.container').length > 0 ? $('.container') : $('section');
+    var container = $('.container').length > 0 ? $('.container') :
+    $('.container-fluid').length > 0 ? $('.container-fluid') : $('section');
 		if(nav.hasClass('hide-nav')){
       nav.css('z-index','101');
       nav.addClass('show-nav').removeClass('hide-nav');
