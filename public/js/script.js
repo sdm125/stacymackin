@@ -139,7 +139,7 @@
     },
     toggleFullHeight = function(){
       if($('.work').length > 0){
-        if($(window).innerHeight() > 700){
+        if(window.innerHeight > 700){
           $('html').css('height','100%');
         }
         else {
