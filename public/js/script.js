@@ -136,15 +136,28 @@
           work.css('height', tallest);
         }
       }, 200);
+    },
+    toggleFullHeight = function(){
+      if($('.work').length > 0){
+        if($(window).innerHeight() > 700){
+          $('html').css('height','100%');
+        }
+        else {
+          $('html').css('height','auto');
+        }
+      }
     };
     setWorkHeight();
+    toggleFullHeight();
 
     $(window).on('resize', function(){
+      toggleFullHeight();
       if(width != $(window).width()){
         width = $(window).width();
         setWorkHeight();
       }
     });
+
   })();
 
   (function(){

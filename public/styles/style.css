@@ -12,7 +12,8 @@ body {
   margin-bottom: 30px;
 }
 
-.container {
+.container,
+.container-fluid {
   height: 100%;
 }
 
@@ -470,6 +471,28 @@ video {
 /******************************************
 ******************* /WORK/ ****************
 *******************************************/
+
+.work-wrapper {
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+}
+
+@media screen and (min-height: 700px) {
+  .work-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .work-wrapper {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+  }
+}
 
 .screenshot {
   max-width: 675px;
