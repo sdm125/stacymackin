@@ -11,7 +11,7 @@
         <div class="col-lg-6">
           <img src=<?php echo "images/" . $project["image"]; ?>>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <h2 class="mt-3"><?php echo strtoupper($project["title"]); ?></h2>
           <span><?php echo strtoupper($project["subtitle"]); ?></span>
           <p class="mt-3">
