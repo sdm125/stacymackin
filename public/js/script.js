@@ -298,7 +298,11 @@
                         'Thank you!</div>';
           $('body').append(success);
           $('.alert-success').delay(1000).fadeOut('slow');
-          $('#contactForm').trigger('reset');;
+          $('#contactForm').trigger('reset');
+          $('p.slide-in-labels').removeClass('slide-in-labels').addClass('hide-labels')
+          setTimeout(function(){
+            $('p.hide-labels').css('color','#ff6666');
+          }, 300);
         },
         error: function(e) {
           console.log(e);
