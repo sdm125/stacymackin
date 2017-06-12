@@ -299,7 +299,8 @@
           $('body').append(success);
           $('.alert-success').delay(1000).fadeOut('slow');
           $('#contactForm').trigger('reset');
-          $('p.slide-in-labels').removeClass('slide-in-labels').addClass('hide-labels')
+          $('p.slide-in-labels').removeClass('slide-in-labels').addClass('hide-labels');
+          $('input.slide-placeholder-out, textarea.slide-placeholder-out').removeClass('slide-placeholder-out').addClass('slide-placeholder-in');
           setTimeout(function(){
             $('p.hide-labels').css('color','#ff6666');
           }, 300);

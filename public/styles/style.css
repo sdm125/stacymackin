@@ -478,7 +478,7 @@ video {
   transform: translateY(0);
 }
 
-@media screen and (min-height: 700px) {
+@media screen and (min-height: 800px) {
   .work-wrapper {
     position: absolute;
     top: 50%;
