@@ -33,7 +33,7 @@ section {
 
 #loadContainer {
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -169,7 +169,6 @@ nav.not-home {
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  filter: blur(20px);
   opacity: 0;
 }
 
@@ -179,15 +178,21 @@ nav.not-home {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  filter: blur(0px);
-  opacity: .75;
+  opacity: .85;
+  background: rgba(255,255,255,.2);
 }
 
+/* IE10+ CSS styles go here */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
+  /* IE does not support filter */
   .show-nav {
     opacity: .95 !important;
     background: #eee !important;
+  }
+
+  /* justify-content: center is causing the about img to be at bottom of viewport */
+  #about-one {
+    justify-content: none !important;
   }
 }
 
@@ -197,24 +202,28 @@ nav.not-home {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  filter: blur(40px);
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -ms-filter: blur(15px);
+  -o-filter: blur(15px);
+  filter: blur(15px);
 }
 
 nav.not-home a {
 	font-size: 5rem;
   font-weight: bold;
 	padding: 10px;
+  text-shadow: 1px 0 1px #000;
 }
 
 nav.not-home a:hover {
   text-decoration: none !important;
   color: #efe;
-  text-shadow: 1px 0 1px #000;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   nav.not-home a {
-    font-size: 20vw;
+    font-size: 15vw;
   }
 }
 
@@ -226,6 +235,7 @@ nav.not-home ul {
   font-size: 50rem;
   transition: font-size 400ms;
 	padding-left: 0;
+  z-index: 101 !important;
 }
 
 /*
@@ -336,6 +346,12 @@ video {
   z-index: 100;
   transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
+}
+
+@media screen and (max-width: 350px) {
+  .profile-img {
+    width: 13rem;
+  }
 }
 
 .fa-arrow-down {
@@ -641,7 +657,7 @@ button:hover {
 
 div.alert {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index:1000;
@@ -694,8 +710,8 @@ label input {
   width: 100%;
 }
 
-@media screen and (max-width: 410px) {
-  .contact header h2 {
+@media screen and (max-width: 425px) {
+  header h2 {
     font-size: 19vw;
   }
 }

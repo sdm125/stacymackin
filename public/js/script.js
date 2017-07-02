@@ -9,27 +9,29 @@
   ******************* MENU ******************
   *******************************************/
 
-	$('.menu-btn').on('click', function() {
-		var nav = $('nav');
+  (function(){
+    var nav = $('nav');
     var navList = $('nav ul');
     var container = $('.container').length > 0 ? $('.container') :
     $('.container-fluid').length > 0 ? $('.container-fluid') : $('section');
-		if(nav.hasClass('hide-nav')){
-      nav.css('z-index','101');
-      nav.addClass('show-nav').removeClass('hide-nav');
-      navList.css('font-size','5rem');
-      container.addClass('blur-background');
-		}
-		else {
-      nav.addClass('hide-nav').removeClass('show-nav');
-      setTimeout(function(){
-        nav.css('z-index','-1');
-      }, 500);
-      navList.css('font-size','50rem');
-      container.removeClass('blur-background');
-		}
-		$(this).toggleClass('change');
-	});
+    $('.menu-btn').on('click', function() {
+      if(nav.hasClass('hide-nav')){
+        nav.css('z-index','101');
+        nav.addClass('show-nav').removeClass('hide-nav');
+        navList.css('font-size','1rem');
+        container.addClass('blur-background');
+      }
+      else {
+        nav.addClass('hide-nav').removeClass('show-nav');
+        setTimeout(function(){
+          nav.css('z-index','-1');
+        }, 500);
+        navList.css('font-size','50rem');
+        container.removeClass('blur-background');
+      }
+      $(this).toggleClass('change');
+    });
+  })();
 
   /******************************************
   ******************* HOME ******************
