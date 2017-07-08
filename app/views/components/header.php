@@ -14,3 +14,4 @@
     <link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body class="preload">
+    <?php include_once("analyticstracking.php") ?>
