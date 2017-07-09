@@ -56,12 +56,12 @@ $(document).ready(function(){
     var scrollMagicData = (function(){
         controller = new ScrollMagic.Controller(),
         scenes = [],
-        tween0 = {rotation: 360},
-        tween1 = {width: 275},
-        tween2 = {rotation: -360},
-        tween4 = {width: 295},
-        tween5 = {opacity: 1},
-        tween8 = {};
+        tween0 = {rotation: 360, force3D: true},
+        tween1 = {width: 275, force3D: true},
+        tween2 = {rotation: -360, force3D: true},
+        tween4 = {width: 295, force3D: true},
+        tween5 = {opacity: 1, force3D: true},
+        tween8 = {force3D: true};
       return {
         controller: controller,
         scenes: scenes,
@@ -206,7 +206,7 @@ $(document).ready(function(){
     scrollMagicData.scenes[7] = new ScrollMagic.Scene({
       triggerElement: '#about-five'
     })
-    .setTween('#about-five h2', .5, { opacity: 1 })
+    .setTween('#about-five h2', .5, { opacity: 1})
     .on('start', function(e) {
       if(e.scrollDirection === 'FORWARD'){
         aboutElements.body.css({'background-color':'#A06CD5'});
