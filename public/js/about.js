@@ -90,7 +90,7 @@ $(document).ready(function(){
         scrollMagicData.tween1.right = 275;
         scrollMagicData.tween2.left = -210;
         scrollMagicData.tween4.width = 400;
-        scrollMagicData.tween4.right = -aboutLeftWidth.aboutRightWidth;
+        scrollMagicData.tween4.right = -aboutElements.aboutRightWidth;
         scrollMagicData.tween5.scale = 2;
         scrollMagicData.tween8 = TweenMax.staggerFromTo('.stagger', 1, {left: 700}, {left: 7, ease: Back.easeOut}, 0.05);
       }
