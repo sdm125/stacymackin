@@ -40,9 +40,9 @@ $(document).ready(function(){
       bio = $('#bio'),
       profileImg = $('#bio .profile-img'),
       aboutLeft = $('#bio .about-left'),
-      aboutLeftWidth = aboutLeft.offsetWidth,
+      aboutLeftWidth = $('.about-left')[0].offsetWidth,
       aboutRight = $('#bio .about-right'),
-      aboutRightWidth = aboutRight.offsetWidth,
+      aboutRightWidth = $('.about-right')[0].offsetWidth,
       aboutOne = $('#about-one'),
       aboutFourImg = $('#about-four img');
       return {
@@ -87,10 +87,10 @@ $(document).ready(function(){
       else {
         scrollMagicData.tween0.left = aboutElements.aboutLeftWidth;
         scrollMagicData.tween1.width = 375;
-        scrollMagicData.tween1.right = aboutElements.aboutRightWidth;
+        scrollMagicData.tween1.right = 275;
         scrollMagicData.tween2.left = -210;
         scrollMagicData.tween4.width = 400;
-        scrollMagicData.tween4.right = -270;
+        scrollMagicData.tween4.right = -aboutLeftWidth.aboutRightWidth;
         scrollMagicData.tween5.scale = 2;
         scrollMagicData.tween8 = TweenMax.staggerFromTo('.stagger', 1, {left: 700}, {left: 7, ease: Back.easeOut}, 0.05);
       }
