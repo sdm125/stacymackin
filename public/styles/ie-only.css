@@ -7,6 +7,12 @@
 }
 
 /* justify-content: center is causing the about img to be at bottom of viewport */
-#about-one {
+/*#about-one {
   justify-content: none !important;
+}*/
+
+#bio {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
 }
