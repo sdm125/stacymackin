@@ -40,15 +40,19 @@ $(document).ready(function(){
       bio = $('#bio'),
       profileImg = $('#bio .profile-img'),
       aboutLeft = $('#bio .about-left'),
+      aboutLeftWidth = aboutLeft.offsetWidth,
       aboutRight = $('#bio .about-right'),
+      aboutRightWidth = aboutRight.offsetWidth,
       aboutOne = $('#about-one'),
       aboutFourImg = $('#about-four img');
       return {
         body: body,
         profileImg: profileImg,
         aboutLeft: aboutLeft,
+        aboutLeftWidth: aboutLeftWidth,
         aboutOne: aboutOne,
         aboutRight: aboutRight,
+        aboutRightWidth: aboutRightWidth,
         aboutFourImg: aboutFourImg
       };
     })();
@@ -81,9 +85,9 @@ $(document).ready(function(){
         $('.stagger').css({'left':'0'});
       }
       else {
-        scrollMagicData.tween0.left = 175;
+        scrollMagicData.tween0.left = aboutElements.aboutLeftWidth;
         scrollMagicData.tween1.width = 375;
-        scrollMagicData.tween1.right = 275;
+        scrollMagicData.tween1.right = aboutElements.aboutRightWidth;
         scrollMagicData.tween2.left = -210;
         scrollMagicData.tween4.width = 400;
         scrollMagicData.tween4.right = -270;
