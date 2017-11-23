@@ -6,7 +6,7 @@
   <header>
     <h2 class="slide-down-in about">ABOUT</h2>
   </header>
-  <div id="bio" class="slide-down-in">
+  <div id="bio">
     <span class="about-left"></span>
     <span class="about-right"></span>
     <img class="profile-img rounded-circle" src="images/stacy_bw.jpg">

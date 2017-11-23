@@ -27,9 +27,8 @@ $(document).ready(function(){
     $.scrollify({
       section : "section.about",
       easing: "easeOutExpo",
-      scrollSpeed: 700,
+      scrollSpeed: 1000,
       scrollbars: false,
-      setHeights: true,
       overflowScroll: false,
       updateHash: true,
       touchScroll: true,
@@ -80,17 +79,17 @@ $(document).ready(function(){
 
     // Add properties to tween objects if not mobile
     (function() {
-      if ($(window).width() < 700) {
+      if($(window).width() < 700) {
         $('#bio span').addClass('bio-mobile');
         $('.stagger').css({'left':'0'});
       }
       else {
-        scrollMagicData.tween0.left = aboutElements.aboutLeftWidth;
+        scrollMagicData.tween0.left = 175;
         scrollMagicData.tween1.width = 375;
         scrollMagicData.tween1.right = 275;
         scrollMagicData.tween2.left = -210;
         scrollMagicData.tween4.width = 400;
-        scrollMagicData.tween4.right = -aboutElements.aboutRightWidth;
+        scrollMagicData.tween4.right = -270;
         scrollMagicData.tween5.scale = 2;
         scrollMagicData.tween8 = TweenMax.staggerFromTo('.stagger', 1, {left: 700}, {left: 7, ease: Back.easeOut}, 0.05);
       }
