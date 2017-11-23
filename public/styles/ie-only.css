@@ -10,9 +10,3 @@
 #about-one {
   justify-content: none !important;
 }
-
-#bio {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-}
