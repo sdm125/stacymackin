@@ -2,7 +2,7 @@
 <nav class="pull-left not-home hide-nav">
   <ul>
     <?php
-      $nav = array('index'=>'HOME', 'about'=>'ABOUT', 'work'=>'WORK', 'contact'=>'CONTACT');
+      $nav = array('/'=>'HOME', 'about'=>'ABOUT', 'work'=>'WORK', 'contact'=>'CONTACT');
       foreach($nav as $name => $link) {
         echo '<li id="#' . $name . '"><a href="' . $name . '">'. $link . '</a></li>';
       }

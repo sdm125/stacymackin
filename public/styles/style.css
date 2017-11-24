@@ -385,18 +385,13 @@ video {
 	transition: width 200ms;
 	margin: auto;
   vertical-align: middle;
-  width: 15rem;
+  max-width: 15rem;
+  width: 100%;
   z-index: 100;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-}
-
-@media screen and (max-width: 350px) {
-  .profile-img {
-    width: 13rem;
-  }
 }
 
 .fa-arrow-down {
@@ -414,7 +409,7 @@ video {
   right: 0;
 }
 
-#bio {
+/*#bio {
   position: fixed;
   top: 50%;
   left: 0;
@@ -422,25 +417,31 @@ video {
   z-index: 100;
   margin: auto;
   transform: translateY(-50%);
-}
+}*/
 
 #bio span {
 	color: #fff;
-	font-size: 2.7rem;
+	font-size: 4rem;
   font-family: 'Rubik', sans-serif;
 	position: absolute;
 	left: 0;
-	right: 10rem;
 	overflow: hidden;
-	width: 0;
 	margin: auto;
 	white-space: nowrap;
-  transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+#bio .about-right {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  #bio span {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -449,15 +450,10 @@ video {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
+    position: absolute;
+    bottom: -15vw;
+    font-size: 10vw !important;
   }
-}
-
-.bio-mobile {
-  position: absolute;
-  bottom: -60px;
-  left: 0 !important;
-  right: 0 !important;
-  font-size: 2rem !important;
 }
 
 #about-one header {
@@ -542,14 +538,29 @@ video {
   text-align: center;
   opacity: 0;
   top: 50%;
-  -webkit-transform: translateY(-70%);
-      -ms-transform: translateY(-70%);
-          transform: translateY(-70%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (max-width: 700px) {
+  #about-five h2 {
+    font-size: 10vw;
+  }
+
+  .fa-github {
+    font-size: 70vw;
+  }
 }
 
 #about-five h2 a {
   color: #fff;
   text-decoration: none !important;
+  transition: color 300ms;
+}
+
+#about-five h2 a:hover {
+  color: #401c63;
 }
 
 .stagger {
@@ -557,6 +568,13 @@ video {
   left: 700px;
   margin-right: -1.8vw;
 }
+
+@media screen and (max-width: 700px) {
+  .stagger {
+    left: 0;
+  }
+}
+
 
 /******************************************
 ******************* /WORK/ ****************
