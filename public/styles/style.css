@@ -376,7 +376,8 @@ video {
           transform: translateY(-50%);
 }
 
-.profile-img {
+.profile-img,
+.www-img {
 	border: 3px solid #000;
 	display: block;
 	position: relative;
@@ -392,6 +393,10 @@ video {
   backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+.www-img {
+  display: none;
 }
 
 .fa-arrow-down {

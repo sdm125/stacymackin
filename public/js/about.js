@@ -31,6 +31,9 @@ $(document).ready(function(){
     touchScroll: true,
   });
 
+  var preloadwwwImg = new Image();
+  preloadwwwImg.src = 'images/www.svg';
+
   var aboutElements = (function(){
     var body = $('body'),
     bio = $('#bio'),
