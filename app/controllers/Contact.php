@@ -1,6 +1,7 @@
 <?php
 
 require_once '../app/ConnectDB.php';
+require 'vendor/autoload.php';
 
 class Contact extends Controller
 {
@@ -37,8 +38,19 @@ class Contact extends Controller
       ':message' => $message
     ));
 
-    mail('stacy.mackin@gmail.com', $firstName . ' ' . $lastName . ' sent a message', $message);
+    $from = new SendGrid\Email($firstName . ' ' $lastName , $email);
+    $subject = $firstName . ' ' $lastName . ' has sent a message from stacymackin.com';
+    $to = new SendGrid\Email('Stacy Mackin', 'stacy.mackin@gmail.com');
+    $content = new SendGrid\Content('text/plain', $message);
+    $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
+    $apiKey = getenv('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');
+    $sg = new \SendGrid($apiKey);
+
+    $response = $sg->client->mail()->send()->post($mail);
+    echo $response->statusCode();
+    print_r($response->headers());
+    echo $response->body();
   }
 
 }
