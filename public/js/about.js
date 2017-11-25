@@ -31,6 +31,7 @@ $(document).ready(function(){
     touchScroll: true,
   });
 
+  // Preload www.svg image
   var preloadwwwImg = new Image();
   preloadwwwImg.src = 'images/www.svg';
 

@@ -505,11 +505,21 @@ video {
 
 @media screen and (max-width: 700px) {
   #about-four h2 {
-    font-size: 30vw !important;
+    font-size: 20vw !important;
   }
 
   #about-four img {
     max-height: 130px !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #about-four div div {
+    margin-top: 10px;
+  }
+
+  #about-four h2 {
+    font-size: 30vw !important;
   }
 }
 
@@ -542,7 +552,7 @@ video {
   position: relative;
   text-align: center;
   opacity: 0;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
