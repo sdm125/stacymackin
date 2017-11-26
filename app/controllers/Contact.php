@@ -21,29 +21,27 @@ class Contact extends Controller
   public function insert()
   {
 
-    $firstName = (!empty($_POST['first']) ? $_POST['first'] : '');
-    $lastName = (!empty($_POST['last']) ? $_POST['last'] : '');
+    $name = (!empty($_POST['name']) ? $_POST['name'] : '');
     $email = (!empty($_POST['email']) ? $_POST['email'] : '');
     $message = (!empty($_POST['message']) ? $_POST['message'] : '');
 
-    $sql = "INSERT INTO contact (firstName, lastName, email, message)
-    VALUES(:firstName, :lastName, :email, :message)";
+    $sql = "INSERT INTO contact (name, email, message)
+    VALUES(:name :email, :message)";
 
     $this->query = $this->handler->prepare($sql);
 
     $this->query->execute(array(
-      ':firstName' => $firstName,
-      ':lastName' => $lastName,
+      ':name' => $name,
       ':email' => $email,
       ':message' => $message
     ));
 
-    $from = new SendGrid\Email($firstName . ' ' . $lastName, $email);
-    $subject = $firstName . ' ' . $lastName . ' has sent a message from stacymackin.com';
+    $from = new SendGrid\Email($name, $email);
+    $subject = $name . ' has sent a message from stacymackin.com';
     $to = new SendGrid\Email('Stacy Mackin', 'stacy.mackin@gmail.com');
-    $content = new SendGrid\Content('text/plain', $message);
+    $content = new SendGrid\Content('text/html', 'Name: ' . $name . '<br>' . 'Email: '. $email . '<br><br>' . $message);
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
-
+    $mail->CharSet = "utf-8";
     $apiKey = getenv('SENDGRID_API_KEY');
     $sg = new \SendGrid($apiKey);
 

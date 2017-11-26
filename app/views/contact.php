@@ -15,9 +15,9 @@
   <form id="contactForm" method="post" action="" class="slide-down-in" autocomplete="off">
     <fieldset>
       <div class="row">
-        <?php $fields = array('First Name' => ['first','text'], 'Last Name' => ['last','text'], 'Email' => ['email','email']); ?>
+        <?php $fields = array('Name' => ['name','text'], 'Email' => ['email','email']); ?>
         <?php foreach($fields as $key => $value): ?>
-          <?php echo ($key === 'Email') ? '<div class="col-12 col-sm-12">' : '<div class="col-12 col-sm-6">'; ?>
+          <?php echo ($key === 'Email') ? '<div class="col-6-md col-12">' : '<div class="col-6-md col-12">'; ?>
             <label>
               <div class="title">
                 <p class="hide-labels"><?php echo $key ?></p>

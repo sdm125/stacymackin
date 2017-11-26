@@ -819,9 +819,9 @@ div.alert {
 
 /* Form */
 
-form div:last-child {
+/*form div:last-child {
   margin-top: 20px;
-}
+}*/
 
 form input[type="radio"] {
   display: inline-block;
