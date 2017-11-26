@@ -1,7 +1,7 @@
 <?php
 
 require_once '../app/ConnectDB.php';
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 class Contact extends Controller
 {
@@ -38,8 +38,8 @@ class Contact extends Controller
       ':message' => $message
     ));
 
-    $from = new SendGrid\Email($firstName . ' ' $lastName , $email);
-    $subject = $firstName . ' ' $lastName . ' has sent a message from stacymackin.com';
+    $from = new SendGrid\Email($firstName, $email);
+    $subject = $firstName . ' has sent a message from stacymackin.com';
     $to = new SendGrid\Email('Stacy Mackin', 'stacy.mackin@gmail.com');
     $content = new SendGrid\Content('text/plain', $message);
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
