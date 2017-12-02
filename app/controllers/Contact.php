@@ -20,13 +20,12 @@ class Contact extends Controller
 
   public function insert()
   {
-
     $name = (!empty($_POST['name']) ? $_POST['name'] : '');
     $email = (!empty($_POST['email']) ? $_POST['email'] : '');
     $message = (!empty($_POST['message']) ? $_POST['message'] : '');
 
-    $sql = "INSERT INTO contact (name, email, message)
-    VALUES(:name :email, :message)";
+    $sql = "INSERT INTO contact(name, email, message)
+    VALUES(:name, :email, :message)";
 
     $this->query = $this->handler->prepare($sql);
 

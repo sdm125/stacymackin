@@ -256,62 +256,65 @@
    * contents of body fade out and success message with
    * selected character image is displayed.
    */
-  $('button[type="submit"]').on('click', function(e) {
-    var capitolize = function(name){
+  (function(){
+    var empty,
+    errorsElem,
+    errorList,
+    container = $('.container'),
+    body = $('body'),
+    capitolize = function(name){
       return name.charAt(0).toUpperCase() + name.substring(1, name.length);
     };
-    var empty = contactInput.numEmpty();
 
-    e.preventDefault();
-
-    if(empty.length > 0) {
+    container.on('click', function(){
       if($('.errors').length > 0){
-        $('.errors').remove();
+        $('.errors').fadeOut();
+        container.removeClass('blur-background');
       }
-      $('form').append('<div class="errors alert alert-danger text-center" role="alert">Please fill in your:</div>');
-      empty.each(function(_, elem){
-        var errors = $('.errors');
-        var errorName;
-        contactInput.highlightEmpty(elem);
-        // Appends empty input names to errors element.
-        if(elem.name !== 'message' && elem.name !== 'email'){
-          errorName = '<br>' + capitolize(elem.name) + ' Name';
-          errors.append(errorName);
-        }
-        else {
-          errorName = '<br>' + capitolize(elem.name);
-          errors.append(errorName);
-        }
-      });
-      $('body').on('click', function(){
-        if($('.errors').length > 0){
-          $('.errors').fadeOut();
-        }
-      })
-      return false;
-    }
-    else {
-      $.ajax({
-        url: 'contact/insert',
-        type: 'POST',
-        data: $('#contactForm').serialize(),
-        success: function() {
-          var success = '<div class="alert alert-success fade show text-center" role="alert">' +
-                        'Thank you!</div>';
-          $('body').append(success);
-          $('.alert-success').delay(1000).fadeOut('slow');
-          $('#contactForm').trigger('reset');
-          $('p.slide-in-labels').removeClass('slide-in-labels').addClass('hide-labels');
-          $('input.slide-placeholder-out, textarea.slide-placeholder-out').removeClass('slide-placeholder-out').addClass('slide-placeholder-in');
-          setTimeout(function(){
-            $('p.hide-labels').css('color','#ff6666');
-          }, 300);
-        },
-        error: function(e) {
-          console.log(e);
-        }
-      });
-    }
-  });
+    });
+
+    $('button[type="submit"]').on('click', function(e) {
+      e.preventDefault();
+      empty = contactInput.numEmpty();
+      if(empty.length) {
+        if($('.errors').length){ $('.errors').remove(); }
+        container.addClass('blur-background');
+        errorsElem = document.createElement('div');
+        errorsElem.classList.add('errors', 'alert', 'alert-danger', 'text-center');
+        errorList = document.createElement('span');
+        errorList.innerText = 'Please fill in your:';
+        errorsElem.appendChild(errorList);
+        document.body.insertBefore(errorsElem, $('.container')[0]);
+        empty.each(function(_, elem){
+          contactInput.highlightEmpty(elem);
+          // Appends empty input names to errors element.
+            errorList.innerText += '\n' + capitolize(elem.name);
+        });
+        return false;
+      }
+      else {
+        $.ajax({
+          url: 'contact/insert',
+          type: 'POST',
+          data: $('#contactForm').serialize(),
+          success: function() {
+            var success = '<div class="alert alert-success fade show text-center" role="alert">' +
+                          'Thank you!</div>';
+            body.append(success);
+            $('.alert-success').delay(1200).fadeOut('slow');
+            container.addClass('blur-background')
+            setTimeout(function(){ container.removeClass('blur-background') }, 1200);
+            $('#contactForm').trigger('reset');
+            $('p.slide-in-labels').removeClass('slide-in-labels').addClass('hide-labels');
+            $('input.slide-placeholder-out, textarea.slide-placeholder-out').removeClass('slide-placeholder-out').addClass('slide-placeholder-in');
+            setTimeout(function(){ $('p.hide-labels').css('color','#ff6666'); }, 300);
+          },
+          error: function(e) {
+            console.log(e);
+          }
+        });
+      }
+    });
+  })();
 
 })();

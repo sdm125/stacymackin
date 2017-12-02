@@ -808,13 +808,29 @@ button:hover {
 }
 
 div.alert {
-  position: absolute;
+  font-size: 2rem;
+  position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index:1000;
+  z-index:1001;
+}
+
+@media screen and (max-width: 450px) {
+  div.alert {
+    font-size: 7vw;
+    width: 70vw;
+  }
+}
+
+.alert-danger {
+  background-color: rgba(242, 222, 222, .45);
+}
+
+.alert-success {
+  background-color: rgba(223, 240, 216, .45);
 }
 
 /* Form */
@@ -831,6 +847,10 @@ form input[type="radio"] {
 
 fieldset {
   border: none;
+}
+
+#contactForm label {
+  width: 100%;
 }
 
 label {
@@ -876,6 +896,7 @@ input:focus, button:focus {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
+  color: #000;
   -webkit-transition: text-indent 250ms;
   -o-transition: text-indent 250ms;
   transition: text-indent 250ms;
@@ -891,7 +912,7 @@ textarea {
   border: 2px solid #000;
   border-radius: 5px;
   width: 100%;
-  max-width: 300px;
+  /*max-width: 300px;*/
 }
 
 textarea:focus {

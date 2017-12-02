@@ -11,38 +11,40 @@
       <a href="mailto:stacy.mackin@gmail.com"><i class="fa fa-5x fa-envelope mb-1" aria-hidden="true"></i><br>Email</a>
     </div>
   </div>
-
   <form id="contactForm" method="post" action="" class="slide-down-in" autocomplete="off">
-    <fieldset>
-      <div class="row">
-        <?php $fields = array('Name' => ['name','text'], 'Email' => ['email','email']); ?>
-        <?php foreach($fields as $key => $value): ?>
-          <?php echo ($key === 'Email') ? '<div class="col-6-md col-12">' : '<div class="col-6-md col-12">'; ?>
-            <label>
-              <div class="title">
-                <p class="hide-labels"><?php echo $key ?></p>
-              </div>
-              <input autocomplete="off" type=<?php echo '"' . $value[1] . '"'; ?> name=<?php echo '"' . $value[0]
-              . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?>>
-            </label>
-          </div>
+    <div class="row mt-5">
+      <div class="col-md-5 offset-md-1">
+        <fieldset>
+          <?php $fields = array('Name' => ['name','text'], 'Email' => ['email','email']); ?>
+          <?php foreach($fields as $key => $value): ?>
+          <label>
+            <div class="title">
+              <p class="hide-labels"><?php echo $key ?></p>
+            </div>
+            <input autocomplete="off" type=<?php echo '"' . $value[1] . '"'; ?> name=<?php echo '"' . $value[0]
+            . '"'; ?> placeholder=<?php echo '"' . $key . '"'; ?>>
+          </label>
         <?php endforeach ?>
+        </fieldset>
       </div>
-    </fieldset>
-    <fieldset>
-      <div class="row">
-        <label class="col">
-          <div class="title">
-            <p class="hide-labels">Message</p>
+      <div class="col-md-5">
+        <fieldset>
+          <label>
+            <div class="title">
+              <p class="hide-labels">Message</p>
+            </div>
+            <textarea rows="5" name="message" placeholder="Message"></textarea>
+          </label>
+        </fieldset>
+      </div>
+      <div class="col-md-1 hidden-md"></div>
+      <div class="col-12 mt-5">
+        <fieldset>
+          <div>
+            <button type="submit">SUBMIT</button>
           </div>
-          <textarea rows="5" cols="20" name="message" placeholder="Message"></textarea>
-        </label>
+        </fieldset>
       </div>
-    </fieldset>
-    <fieldset>
-      <div>
-        <button type="submit">SUBMIT</button>
-      </div>
-    </fieldset>
+    </div>
   </form>
 </div>
