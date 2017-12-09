@@ -16,6 +16,7 @@
     $('.container-fluid').length > 0 ? $('.container-fluid') : $('section');
     $('.menu-btn').on('click', function() {
       if(nav.hasClass('hide-nav')){
+        if($('.errors')){$('.errors').fadeOut();}
         nav.css('z-index','101');
         nav.addClass('show-nav').removeClass('hide-nav');
         navList.css('font-size','1rem');
@@ -198,6 +199,12 @@
   /******************************************
   ***************** CONTACT *****************
   *******************************************/
+  $('.contact a').on('mouseover', function(){
+    $(this).children('.fa').css('transform','scale(1.2)');
+  })
+  .on('mouseout', function(){
+    $(this).children('.fa').css('transform','scale(1)');
+  });
 
   var contactInput = (function(){
     // Returns an array of text inputs that are empty.
@@ -277,19 +284,27 @@
       e.preventDefault();
       empty = contactInput.numEmpty();
       if(empty.length) {
-        if($('.errors').length){ $('.errors').remove(); }
         container.addClass('blur-background');
+
+        if($('.errors').length){ $('.errors').remove(); }
+
         errorsElem = document.createElement('div');
         errorsElem.classList.add('errors', 'alert', 'alert-danger', 'text-center');
+
         errorList = document.createElement('span');
         errorList.innerText = 'Please fill in your:';
+
         errorsElem.appendChild(errorList);
-        document.body.insertBefore(errorsElem, $('.container')[0]);
+
         empty.each(function(_, elem){
           contactInput.highlightEmpty(elem);
           // Appends empty input names to errors element.
-            errorList.innerText += '\n' + capitolize(elem.name);
+          errorList.innerText += '\n' + capitolize(elem.name);
         });
+
+        document.body.insertBefore(errorsElem, $('.container')[0]);
+        $('.errors').hide().fadeIn('slow');
+
         return false;
       }
       else {
@@ -302,7 +317,7 @@
                           'Thank you!</div>';
             body.append(success);
             $('.alert-success').delay(1200).fadeOut('slow');
-            container.addClass('blur-background')
+            container.addClass('blur-background');
             setTimeout(function(){ container.removeClass('blur-background') }, 1200);
             $('#contactForm').trigger('reset');
             $('p.slide-in-labels').removeClass('slide-in-labels').addClass('hide-labels');

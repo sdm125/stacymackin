@@ -41,7 +41,7 @@
       <div class="col-12 mt-5">
         <fieldset>
           <div>
-            <button type="submit">SUBMIT</button>
+            <button type="submit">SEND</button>
           </div>
         </fieldset>
       </div>

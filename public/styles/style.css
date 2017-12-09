@@ -789,6 +789,14 @@ button:hover {
   text-decoration: none;
 }
 
+.contact .fa {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  -o-transition: transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
 .contact a:hover {
   -webkit-transition: font-weight 300ms;
   -o-transition: font-weight 300ms;
@@ -797,11 +805,6 @@ button:hover {
 }
 
 .contact .fa:hover {
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
-  -o-transition: transform 300ms;
-  transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -834,16 +837,6 @@ div.alert {
 }
 
 /* Form */
-
-/*form div:last-child {
-  margin-top: 20px;
-}*/
-
-form input[type="radio"] {
-  display: inline-block;
-  height: 125px;
-  width: inherit;
-}
 
 fieldset {
   border: none;
@@ -880,7 +873,7 @@ label input {
   border-width: 0 0 2px 0;
   border-bottom: 2px solid #000;
   margin: auto;
-  padding: 5px 5px 0 5px;
+  padding: 0 5px 0 5px;
   width: 100%;
 }
 
