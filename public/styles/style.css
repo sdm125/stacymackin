@@ -513,16 +513,6 @@ video {
   }
 }
 
-@media screen and (max-width: 450px) {
-  #about-four div div {
-    margin-top: 10px;
-  }
-
-  #about-four h2 {
-    font-size: 30vw !important;
-  }
-}
-
 #about-four div img {
   padding: 10px;
 }
@@ -531,10 +521,22 @@ video {
   color: #fff;
   text-align: center;
   font-size: 5rem;
+  margin-bottom: 2.5rem;
   opacity: 0;
   -webkit-transition: font-size 500ms;
   -o-transition: font-size 500ms;
   transition: font-size 500ms;
+}
+
+@media screen and (max-width: 450px) {
+  #about-four div div {
+    margin-top: 10px;
+  }
+
+  #about-four h2 {
+    font-size: 30vw !important;
+    margin-bottom: 0;
+  }
 }
 
 #about-four img {
@@ -565,6 +567,12 @@ video {
 
   #about-five .fa-github {
     font-size: 70vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #about-five h2 {
+    font-size: 6rem;
   }
 }
 
@@ -700,6 +708,7 @@ video {
 }
 
 .arrow {
+  z-index: 1000;
   cursor: pointer;
 }
 
@@ -717,10 +726,11 @@ video {
 
 #workIndicators {
   position: absolute;
-  right:0; left:0; top:0; bottom:0;
-  margin:auto;
-  height:20px;
-  width:43px;
+  right: 0; left:0; top:0; bottom:0;
+  margin: auto;
+  height: 20px;
+  text-align: center;
+  z-index: -100;
 }
 
 /* work button */

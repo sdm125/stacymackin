@@ -31,7 +31,9 @@
         <i class="arrow fa fa-long-arrow-left fa-5x pull-left" aria-hidden="true"></i>
           <div id="workIndicators">
             <i class="indicator fa fa-circle fa-lg" aria-hidden="true"></i>
-            <i class="indicator fa fa-circle-o fa-lg" aria-hidden="true"></i>
+            <?php for($i = 1; $i < sizeof($this->results); $i++){ ?>
+              <i class="indicator fa fa-circle-o fa-lg" aria-hidden="true"></i>
+            <?php } ?>
           </div>
         <i class="arrow fa fa-long-arrow-right fa-5x pull-right" aria-hidden="true"></i>
       </div>

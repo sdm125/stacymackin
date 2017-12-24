@@ -80,8 +80,8 @@ $(document).ready(function(){
   // Add properties to tween objects if not mobile
   (function() {
     if($(window).width() > 700) {
-      var aboutLeftHalfWidth = aboutElements.aboutLeftWidth / 2;
-      var aboutRightHalfWidth = -(aboutElements.aboutRightWidth / 2);
+      var aboutLeftHalfWidth = $(window).width() > 900 ? aboutElements.aboutLeftWidth / 2 : aboutElements.aboutLeftWidth / 1.8;
+      var aboutRightHalfWidth = $(window).width() > 900 ? -(aboutElements.aboutRightWidth / 2) : -(aboutElements.aboutRightWidth / 1.8);
       scrollMagicData.tween0.left = aboutLeftHalfWidth;
       scrollMagicData.tween1.right = aboutLeftHalfWidth;
       scrollMagicData.tween2.left =  aboutRightHalfWidth;
