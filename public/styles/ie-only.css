@@ -1,0 +1,12 @@
+/* IE9 and below CSS styles go here */
+
+/* IE does not support filter */
+.show-nav {
+  opacity: .95 !important;
+  background: #eee !important;
+}
+
+/* justify-content: center is causing the about img to be at bottom of viewport */
+#about-one {
+  justify-content: none !important;
+}
