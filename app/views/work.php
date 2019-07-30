@@ -20,7 +20,15 @@
           <?php if($project["url"]): ?>
             <a href=<?php echo "\"" . $project["url"] . "\""; ?> target="_blank">
               <button class="hidden-sm-up btn-block">VISIT SITE</button>
-              <button class="hidden-xs-down">VISIT SITE</button></a>
+              <button class="hidden-xs-down">VISIT SITE</button>
+            </a>
+          <?php endif; ?>
+
+          <?php if($project["github_url"]): ?>
+            <a href=<?php echo "\"" . $project["github_url"] . "\""; ?> target="_blank">
+              <button class="hidden-sm-up btn-block" style="margin-top: 1rem;">GITHUB</button>
+              <button class="hidden-xs-down">GITHUB</button>
+            </a>
           <?php endif; ?>
         </div>
       </div>
