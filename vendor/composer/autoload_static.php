@@ -4,14 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInited6ca96fdc7111db3ceb4275c55610f2
+class ComposerStaticInit54b4e272d2e0eaa72157465cd4f047d0
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
         '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
@@ -19,6 +24,10 @@ class ComposerStaticInited6ca96fdc7111db3ceb4275c55610f2
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
@@ -38,9 +47,9 @@ class ComposerStaticInited6ca96fdc7111db3ceb4275c55610f2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInited6ca96fdc7111db3ceb4275c55610f2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInited6ca96fdc7111db3ceb4275c55610f2::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInited6ca96fdc7111db3ceb4275c55610f2::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit54b4e272d2e0eaa72157465cd4f047d0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit54b4e272d2e0eaa72157465cd4f047d0::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit54b4e272d2e0eaa72157465cd4f047d0::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

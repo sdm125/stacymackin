@@ -8,10 +8,10 @@
   <div class="work-wrapper">
     <?php foreach($this->results as $project): ?>
       <div class="row work mt-5 slide-down-in">
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <img src=<?php echo "https://s3.us-east-2.amazonaws.com/stacymackin/" . $project["image"]; ?>>
         </div>
-        <div class="col-lg-5">
+        <div class="col-md-5">
           <h2 class="mt-3"><?php echo strtoupper($project["title"]); ?></h2>
           <span><?php echo strtoupper($project["subtitle"]); ?></span>
           <p class="mt-3">
@@ -19,15 +19,15 @@
           </p>
           <?php if($project["url"]): ?>
             <a href=<?php echo "\"" . $project["url"] . "\""; ?> target="_blank">
-              <button class="hidden-sm-up btn-block">VISIT SITE</button>
-              <button class="hidden-xs-down">VISIT SITE</button>
+              <button class="hidden-sm-up d-md-none btn-block">VISIT SITE</button>
+              <button class="hidden-xs-down d-none d-md-inline">VISIT SITE</button>
             </a>
           <?php endif; ?>
 
           <?php if($project["github_url"]): ?>
             <a href=<?php echo "\"" . $project["github_url"] . "\""; ?> target="_blank">
-              <button class="hidden-sm-up btn-block" style="margin-top: 1rem;">GITHUB</button>
-              <button class="hidden-xs-down">GITHUB</button>
+              <button class="hidden-sm-up d-md-none btn-block" style="margin-top: 1rem;">GITHUB</button>
+              <button class="hidden-xs-down d-none d-md-inline">GITHUB</button>
             </a>
           <?php endif; ?>
         </div>
@@ -47,5 +47,4 @@
       </div>
     </div>
   </div>
-
 </div>

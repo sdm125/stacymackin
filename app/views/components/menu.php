@@ -1,5 +1,5 @@
-
 <nav class="pull-left not-home hide-nav">
+  <div class="modal-bg"></div>
   <ul>
     <?php
       $nav = array('/'=>'HOME', 'about'=>'ABOUT', 'work'=>'WORK', 'contact'=>'CONTACT');

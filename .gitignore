@@ -1,2 +1,3 @@
 .DS_STORE
-.env.vars
+.env
+/vendor/
