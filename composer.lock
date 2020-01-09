@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "945d666278dc7aa7d2c74344e332e9c9",
+    "content-hash": "9587840504f8a512d71dfa9b9474ba20",
     "packages": [
         {
             "name": "sendgrid/php-http-client",
@@ -103,7 +103,9 @@
                 "sendgrid"
             ],
             "time": "2016-09-13T17:27:23+00:00"
-        },
+        }
+    ],
+    "packages-dev": [
         {
             "name": "symfony/polyfill-ctype",
             "version": "v1.13.1",
@@ -214,7 +216,6 @@
             "time": "2019-01-29T11:11:52+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
