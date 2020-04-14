@@ -1,4 +1,4 @@
-<nav class="pull-left not-home hide-nav">
+<nav class="not-home hide-nav">
   <div class="modal-bg"></div>
   <ul>
     <?php
