@@ -11,10 +11,10 @@
     <div class="col-lg-10 col-md-12 slide-down-in" style="margin: auto;">
       <img src="https://stacymackin.s3.us-east-2.amazonaws.com/bio.jpg" id="about-bio-photo">
       <h3>BIO</h3>
-      <p>Software Developer with more than 2 years of professional experience writing full-stack code. Interested in JavaScript, responsive design, and progressive web apps. Earned Mobile Web Specialist Nanodegree from Udacity through Grow with Google Scholarship.</p>
+      <p>Web Developer with more than 2 years of professional experience. Interested in JavaScript, mobile web technologies and progressive web apps. Earned Mobile Web Specialist Nanodegree from Udacity through Grow with Google Scholarship.</p>
       
       <h3>SKILLS</h3>
-      <p>JavaScript, ES6, AngularJS, Service Workers, IndexDB, jQuery, Responsive Design, Mobile Development, Flexbox, Bootstrap, SASS, Node.js, Gulp.js, Puppeteer.js, PHP, Java, ColdFusion, MySQL, MongoDB, Drupal, Git, Github, SVN</p>
+      <p>JavaScript, ES6, ReactJS, AngularJS, jQuery, Progessive Web Apps, Responsive Design, Bootstrap, SASS, Gulp.js, Node.js, Handlebars.js, PHP, Drupal, MySQL, MongoDB, Git, SVN</p>
     </div>
   </div>
 </div>
