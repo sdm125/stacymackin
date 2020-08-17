@@ -11,8 +11,10 @@
         <div class="col-md-6">
         <div class="screen-shot-wrapper">
           <div class="browser-controls">
-            <i class="fa fa-arrow-left"></i>
-            <i class="fa fa-arrow-right"></i>
+            <div class="browser-buttons">
+              <i class="fa fa-arrow-left"></i>
+              <i class="fa fa-arrow-right"></i>
+            </div>
             <div class="url-bar"><?php echo $project["url"]; ?></div>
           </div>
           <img src=<?php echo "https://s3.us-east-2.amazonaws.com/stacymackin/" . $project["image"]; ?>>

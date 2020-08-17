@@ -390,41 +390,48 @@ video {
 *******************************************/
 
 .screen-shot-wrapper {
-  max-width: 500px;
-  border: 3px solid #000;
+  border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   padding-top: 25px;
-  background-color: #000;
+  background-color: #ccc;
   position: relative;
 }
 
 .browser-controls {
+  display: flex;
+  align-items: center;
   height: 25px;
   position: absolute;
   top: 0;
+  padding: 5px;
   width: 100%;
+}
+
+.browser-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+  min-width: 50px;
+  width: calc(10% - 10px);
+  padding-right: 5px;
 }
 
 .fa-arrow-left,
 .fa-arrow-right {
-  color: #fff;
   font-size: 0.75rem;
-  margin-left: 5px;
 }
 
 .url-bar {
-  position: absolute;
-  font-size: 0.1rem;
   display: flex;
   align-items: center;
+  flex-grow: 1;
   padding-left: 5px;
-  top: 0;
-  bottom: 0;
   right: 5px;
-  margin: auto;
-  height: 10px;
+  height: 13px;
   width: 90%;
+  font-size: 0.1rem;
   border-radius: 5px;
   background-color: #fff;
   z-index: 999;
