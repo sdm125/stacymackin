@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:700">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.min.css">
+    <link rel="stylesheet" href="styles/style.min.css?v=2">
     <meta name="theme-color" content="#000000">
 	</head>
 	<body class="preload">
